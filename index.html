@@ -5,38 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooperativa Escolar São José</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-800 font-sans">
-    <div class="bg-blue-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
-        Cooperativa Escolar São José (CESJ) | Lema: <span class="italic font-bold">"Falar Menos e Trabalhar Mais"</span> — Guiné-Bissau
+
+    <!-- Barra Superior de Contactos (Azul Escuro) -->
+    <div class="bg-blue-950 text-white text-xs py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-medium">Cooperativa Escolar São José (CESJ) - Guiné-Bissau</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 text-blue-100">
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-blue-300"></i> Secretaria: +245 95 500 00 00 / 96 600 00 00
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-location-dot text-blue-300"></i> Bissau, Guiné-Bissau
+                </span>
+            </div>
+        </div>
     </div>
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Navegação (Branco) -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo & Nome -->
                 <div class="flex items-center space-x-3">
-                    <div class="bg-blue-800 text-white p-2 rounded-lg font-bold text-xl">CESJ</div>
-                    <div>
-                        <span class="font-bold text-lg text-blue-900 block leading-tight">São José</span>
-                        <span class="text-xs text-slate-500">Guiné-Bissau</span>
+                    <div class="w-12 h-12 rounded-full border-2 border-blue-900 bg-blue-50 flex flex-col items-center justify-center text-center p-1 leading-none shadow-sm">
+                        <span class="font-black text-blue-900 text-xs">CESJ</span>
+                        <span class="text-[8px] text-blue-700 font-bold uppercase tracking-tighter">São José</span>
                     </div>
+                    <div>
+                        <h1 class="font-extrabold text-lg text-blue-950 tracking-tight leading-none uppercase">Cooperativa Escolar São José</h1>
+                        <p class="text-xs text-amber-600 font-bold tracking-wider mt-0.5">"FALAR MENOS E TRABALHAR MAIS"</p>
+                    </div>
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button class="flex items-center space-x-2 border border-slate-300 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-semibold transition">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Modo Pais</span>
+                    </button>
+                    <button class="flex items-center space-x-2 border border-slate-300 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-lg text-sm font-semibold transition">
+                        <span>Direção</span>
+                    </button>
+                    <button class="text-slate-600 hover:text-blue-900 text-xl p-2">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-blue-900 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-2xl p-8 md:p-12 shadow-xl text-center space-y-6">
-            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Cooperativa Escolar São José</h1>
-            <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto">Portal oficial em atualização. Acompanhe as novidades, notas e inscrições para o ano letivo na Guiné-Bissau.</p>
-            <div class="pt-4">
-                <span class="bg-white text-blue-900 font-bold px-6 py-3 rounded-xl shadow inline-block">Portal Online Ativo</span>
-            </div>
-        </div>
-    </main>
+    <!-- Secção Principal Hero (Azul Degradê) -->
+    <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Lado Esquerdo: Mensagem de Boas-Vindas -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-blue-800/80 border border-blue-600/50 px-3.5 py-1.5 rounded-full text-xs font-semibold text-blue-200">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <span>Ensino de Excelência em Guiné-Bissau</span>
+                </div>
 
-    <footer class="bg-white border-t border-slate-200 mt-16 py-6 text-center text-xs text-slate-500">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                    Bem-vindo à <br/>
+                    <span class="text-amber-400">Cooperativa Escolar São José</span>
+                </h2>
+
+                <p class="text-blue-100 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Facilitamos a vida dos encarregados de educação. Agora pode acompanhar as notas dos seus filhos, efetuar matrículas online e adquirir o material escolar sem filas e com dedicação.
+                </p>
+
+                <div class="pt-4 flex flex-wrap gap-4 items-center">
+                    <a href="#" class="bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <span>Aceder ao Portal</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lado Direito: Avisos da Direção -->
+            <div class="lg:col-span-5">
+                <div class="bg-blue-950/60 backdrop-blur-md border border-blue-700/50 rounded-2xl p-6 shadow-2xl space-y-4">
+                    <div class="flex items-center space-x-2 text-amber-400 font-bold text-lg border-b border-blue-800/80 pb-3">
+                        <i class="fa-solid fa-bell"></i>
+                        <h3>Avisos Recentes da Direção</h3>
+                    </div>
+
+                    <!-- Cartão Aviso 1 -->
+                    <div class="bg-blue-900/60 border border-blue-700/40 rounded-xl p-4 hover:border-amber-400/50 transition">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-bullhorn text-amber-400 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Matrículas Abertas</h4>
+                                <p class="text-xs text-blue-200 mt-1 leading-normal">
+                                    As inscrições para os novos alunos do 7º ao 12º Ano iniciam este mês através da nossa plataforma digital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cartão Aviso 2 -->
+                    <div class="bg-blue-900/60 border border-blue-700/40 rounded-xl p-4 hover:border-amber-400/50 transition">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-book text-amber-400 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Manuais Escolares Disponíveis</h4>
+                                <p class="text-xs text-blue-200 mt-1 leading-normal">
+                                    Já pode reservar o kit completo de manuais e uniformes na loja virtual da escola.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
         <p>&copy; 2026 Cooperativa Escolar São José (CESJ) — Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>
