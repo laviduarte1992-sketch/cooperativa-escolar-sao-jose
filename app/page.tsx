@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { 
   BookOpen,
-  GraduationCap, 
+  GraduationCap,
   ShoppingCart, 
   UserCheck, 
   CheckCircle, 
