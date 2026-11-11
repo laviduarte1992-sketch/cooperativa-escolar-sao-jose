@@ -18,13 +18,11 @@ import {
 export default function Home() {
   const [activeTab, setActiveTab] = useState("inicio");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
   const [studentId, setStudentId] = useState("");
   const [searchResult, setSearchResult] = useState<any>(null);
   const [cart, setCart] = useState<any[]>([]);
   const [orderSuccess, setOrderSuccess] = useState(false);
 
-  // Mock de dados de alunos para consulta de notas
   const mockStudents: { [key: string]: any } = {
     "12345": {
       name: "Mariana Duarte",
@@ -42,7 +40,7 @@ export default function Home() {
       class: "8º Ano - Turma B",
       status: "Matriculado",
       grades: [
-        { subject: "Língua Portuguesa", grade: 14, status.ToString?: "Suficiente" },
+        { subject: "Língua Portuguesa", grade: 14, status: "Suficiente" },
         { subject: "Matemática", grade: 16, status: "Bom" },
         { subject: "Física e Química", grade: 15, status: "Bom" },
         { subject: "História", grade: 17, status: "Muito Bom" }
@@ -72,12 +70,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
-      {/* Top Banner / Slogan */}
       <div className="bg-blue-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
         Cooperativa Escolar São José (CESJ) | Lema: <span className="italic font-bold">"Falar Menos e Trabalhar Mais"</span> — Guiné-Bissau
       </div>
 
-      {/* Navbar */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
@@ -89,7 +85,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8 font-medium">
               <button onClick={() => setActiveTab("inicio")} className={`hover:text-blue-600 transition ${activeTab === "inicio" ? "text-blue-700 border-b-2 border-blue-700 pb-1" : "text-slate-600"}`}>Início</button>
               <button onClick={() => setActiveTab("notas")} className={`hover:text-blue-600 transition ${activeTab === "notas" ? "text-blue-700 border-b-2 border-blue-700 pb-1" : "text-slate-600"}`}>Portal dos Pais (Notas)</button>
@@ -101,7 +96,6 @@ export default function Home() {
               <button onClick={() => setActiveTab("contacto")} className={`hover:text-blue-600 transition ${activeTab === "contacto" ? "text-blue-700 border-b-2 border-blue-700 pb-1" : "text-slate-600"}`}>Contacto</button>
             </div>
 
-            {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button onClick={() => setMenuOpen(!menuOpen)} className="text-slate-700 hover:text-blue-900 focus:outline-none">
                 {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -110,7 +104,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile menu dropdown */}
         {menuOpen && (
           <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
             <button onClick={() => { setActiveTab("inicio"); setMenuOpen(false); }} className="block w-full text-left py-2 text-slate-700 font-medium">Início</button>
@@ -122,10 +115,7 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Main Content Areas */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
-        {/* INICIO */}
         {activeTab === "inicio" && (
           <div className="space-y-12">
             <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-2xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between">
@@ -145,7 +135,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Quick Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div onClick={() => setActiveTab("notas")} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition cursor-pointer group">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 mb-4 group-hover:bg-blue-800 group-hover:text-white transition">
@@ -174,7 +163,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* PORTAL DE NOTAS */}
         {activeTab === "notas" && (
           <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
             <div>
@@ -237,7 +225,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* INSCRIÇÕES */}
         {activeTab === "inscricoes" && (
           <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
             <div>
@@ -285,7 +272,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* LOJA DE LIVROS */}
         {activeTab === "loja" && (
           <div className="space-y-6">
             <div className="flex justify-between items-center">
@@ -344,7 +330,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* CONTACTO */}
         {activeTab === "contacto" && (
           <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6 text-center">
             <h2 className="text-2xl font-bold text-blue-900">Contacte a Secretaria</h2>
@@ -357,10 +342,8 @@ export default function Home() {
             </div>
           </div>
         )}
-
       </main>
 
-      {/* Footer */}
       <footer className="bg-white border-t border-slate-200 mt-16 py-6 text-center text-xs text-slate-500">
         <p>&copy; {new Date().getFullYear()} Cooperativa Escolar São José (CESJ) — Todos os direitos reservados.</p>
       </footer>
